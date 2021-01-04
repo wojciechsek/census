@@ -4,7 +4,10 @@ import javax.persistence.ParameterMode;
 import javax.persistence.StoredProcedureQuery;
 
 public class Admin extends Bureaucrat {
-  // TODO: odpowiednie metody, które wywoła potem gui
+    public Admin(String pesel) {
+        super(pesel);
+    }
+    // TODO: odpowiednie metody, które wywoła potem gui
 
     public String addBureaucrat(String pesel, String password, String name, String surname, String city, String street, int house, int flat) {
         StoredProcedureQuery procedureQuery = session.createStoredProcedureQuery("changeStatus");
